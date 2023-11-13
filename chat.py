@@ -1,9 +1,13 @@
 # 运行前务必执行“!pip install --upgrade openai”，确保openai模块版本号为1.2.3或更高
 from openai import OpenAI
 import time
-from flask import Flask, render_template, request # 提前将OpenAI API Key写入环境变量
+from dotenv import load_dotenv
+import os
+from flask import Flask, render_template, request 
+
+load_dotenv()  # 这将加载 .env 文件中的环境变量
 client = OpenAI()
-assistant = client.beta.assistants.retrieve("asst_Toevazny9ckiIZiR2AtBhplR") # 将双引号中的值替换为自己的助手代号，一般以“asst_”开头
+assistant = client.beta.assistants.retrieve("asst_Toevazny9ckiIZiR2AtBhplR") # assistantID
 
 app = Flask(__name__)
 
