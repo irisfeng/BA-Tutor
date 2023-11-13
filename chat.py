@@ -5,7 +5,7 @@ import time
 import os
 from flask import Flask, render_template, request 
 load_dotenv()
-client = OpenAI()
+client = OpenAI() # 这将加载 .env 文件中的环境变量
 assistant = client.beta.assistants.retrieve("asst_Toevazny9ckiIZiR2AtBhplR") # assistantID
 
 app = Flask(__name__)
