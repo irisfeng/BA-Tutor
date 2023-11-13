@@ -6,7 +6,7 @@ import os
 from flask import Flask, render_template, request 
 load_dotenv()
 client = OpenAI()
-assistant = client.beta.assistants.retrieve("asst_xxx") # assistantID
+assistant = client.beta.assistants.retrieve("asst_Toevazny9ckiIZiR2AtBhplR") # assistantID
 
 app = Flask(__name__)
 
